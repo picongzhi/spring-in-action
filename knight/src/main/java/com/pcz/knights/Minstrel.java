@@ -5,10 +5,10 @@ import java.io.PrintStream;
 /**
  * @author picongzhi
  */
-public class Minsteal {
+public class Minstrel {
     private PrintStream stream;
 
-    public Minsteal(PrintStream stream) {
+    public Minstrel(PrintStream stream) {
         this.stream = stream;
     }
 

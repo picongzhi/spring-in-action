@@ -7,7 +7,7 @@
         <constructor-arg ref="quest"/>
     </bean>
 
-    <bean id="quest" class="com.pcz.knights.SlowDragonQuest">
+    <bean id="quest" class="com.pcz.knights.SlayDragonQuest">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 </beans>

@@ -5,10 +5,10 @@ import java.io.PrintStream;
 /**
  * @author picongzhi
  */
-public class SlowDragonQuest implements Quest {
+public class SlayDragonQuest implements Quest {
     private PrintStream stream;
 
-    public SlowDragonQuest(PrintStream stream) {
+    public SlayDragonQuest(PrintStream stream) {
         this.stream = stream;
     }
 
