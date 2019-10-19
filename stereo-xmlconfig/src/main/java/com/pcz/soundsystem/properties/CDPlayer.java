@@ -17,6 +17,6 @@ public class CDPlayer implements MediaPlayer {
 
     @Override
     public void play() {
-
+        compactDisc.play();
     }
 }
