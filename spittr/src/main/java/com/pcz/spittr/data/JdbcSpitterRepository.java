@@ -38,7 +38,7 @@ public class JdbcSpitterRepository implements SpitterRepository {
     @Override
     public Spitter findByUsername(String username) {
         return jdbc.queryForObject("SELECT id, username, null, first_name, last_name, email" +
-                        " FROM Spittr WHERE username = ?",
+                        " FROM Spitter WHERE username = ?",
                 new SpitterRowMapper(), username);
     }
 
