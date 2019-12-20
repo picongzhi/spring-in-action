@@ -27,7 +27,7 @@ public class SpitterController {
     private SpitterRepository spitterRepository;
 
     @Autowired
-    private SpitterController(SpitterRepository spitterRepository) {
+    public SpitterController(SpitterRepository spitterRepository) {
         this.spitterRepository = spitterRepository;
     }
 
@@ -62,8 +62,11 @@ public class SpitterController {
         }
 
         spitterRepository.save(spitter);
-        profilePicture.transferTo(new File("/tmp/spittr/" + spitter.getUsername() + ".jpg"));
-        redirectAttributes.addAttribute("username", spitter.getUsername());
+        if (profilePicture != null) {
+            profilePicture.transferTo(new File("/tmp/spittr/" + spitter.getUsername() + ".jpg"));
+        }
+
+//        redirectAttributes.addAttribute("username", spitter.getUsername());
         redirectAttributes.addFlashAttribute(spitter);
 
         return "redirect:/spitter/" + spitter.getUsername();
